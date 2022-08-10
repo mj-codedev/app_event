@@ -1,5 +1,5 @@
 # app_event
-  App event help manage events easily. It is optimized to handle the event without being involved in the state. You can manage the event by simply adding it to the required class.
+  App event help manage events easily without using stream. You can manage the event by simply adding it to the required class.
 
 
 ## Usage
