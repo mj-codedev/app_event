@@ -1,11 +1,10 @@
 name: app_event
-description: App Event Bus Package
-version: 0.0.1
-homepage:
+description: App event handle event without using stream
+version: 1.0.0
+repository: https://github.com/mj-codedev/app_event
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
   flutter:
