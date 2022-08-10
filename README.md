@@ -22,7 +22,7 @@ class Model implements AppEventInterface{
 
  - Register your event name with your class implemented AppEventInterface
 ```dart
-AppEvent.register("eventName", Model);
+AppEvent.register("test1", Model);
 ```
 
 ### 3. Dispatch Event 
