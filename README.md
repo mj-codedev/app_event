@@ -11,20 +11,21 @@
 class Model implements AppEventInterface{
   @override
   onEventReceived(String eventName, value) {
-    //todo: do action
-    AAA();
+    if(eventName == "test1"){
+      AAA();
+    }
   }
 }
 ```
 
-### 2. Register event 
+### 2. Register Event 
 
  - Register your event name with your class implemented AppEventInterface
 ```dart
-AppEvent.register("eventName", Model);
+AppEvent.register("test1", Model);
 ```
 
-### 3. Dispatch event 
+### 3. Dispatch Event 
 
  - Dispatch your event When you want
 ```dart
@@ -39,7 +40,15 @@ All pre-made onEventReceived functions are executed automatically.
 ```dart
 @override
 onEventReceived(String eventName, value) {
-  // execute function
-  AAA();
+  if(eventName == "test1"){
+    AAA();
+  }
 }
+```
+
+### 5. Unregister Event
+
+ - When you no longer use the event, unregister event
+```dart
+AppEvent.unRegister("test1");
 ```
