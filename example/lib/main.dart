@@ -82,19 +82,31 @@ class _Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(12.0)),
+      decoration: BoxDecoration(color: Colors.blueAccent, borderRadius: BorderRadius.circular(12.0)),
       padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
-      child: Text(text),
+      child: Text(
+        text,
+        style: TextStyle(color: Colors.white),
+      ),
     );
   }
 }
 
 class TestModel1 implements AppEventInterface {
-  String text = "list tile";
+  String text = "waiting";
+  int number = 0;
   @override
   onEventReceived(String eventName, value) {
+
+    switch (eventName) {
+      case "test1":
+        
+        break;
+      default:
+    }
     if (eventName == "test1") {
-      text = "receive text";
+      number++;
+      text = "receive text $number";
     }
   }
 }
