@@ -1,13 +1,13 @@
 import 'app_event.interface.dart';
 
 class AppEvent {
-  static Map<String, List<IAppEvent>> map = {};
+  static Map<String, List<AppEventInterface>> map = {};
 
-  static register(String eventName, IAppEvent iEvent) {
-    List<IAppEvent> events = [];
+  static register(String eventName, AppEventInterface iEvent) {
+    List<AppEventInterface> events = [];
 
     if (map[eventName] == null) {
-      events = <IAppEvent>[];
+      events = <AppEventInterface>[];
     } else {
       events = map[eventName]!;
     }
@@ -20,7 +20,7 @@ class AppEvent {
     map[eventName] = events;
   }
 
-  static unRegister(IAppEvent listener) {
+  static unRegister(AppEventInterface listener) {
     map.removeWhere((key, events) {
       events.removeWhere((event) => event == listener);
       return events.isEmpty;
@@ -32,7 +32,7 @@ class AppEvent {
   }
 
   static dispatch(String eventName, {dynamic value}) {
-    List<IAppEvent>? events = map.containsKey(eventName) ? map[eventName] : [];
+    List<AppEventInterface>? events = map.containsKey(eventName) ? map[eventName] : [];
 
     events?.forEach((event) => event.onEventReceived(eventName, value));
   }

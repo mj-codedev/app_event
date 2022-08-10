@@ -89,7 +89,7 @@ class _Button extends StatelessWidget {
   }
 }
 
-class TestModel1 implements IAppEvent {
+class TestModel1 implements AppEventInterface {
   String text = "list tile";
   @override
   onEventReceived(String eventName, value) {
