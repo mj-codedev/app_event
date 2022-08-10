@@ -1,5 +1,8 @@
 # app_event
   App event help manage events easily without using stream. You can manage the event by simply adding it to the required class.
+  
+#### App_event Structure
+![sdcdc drawio](https://user-images.githubusercontent.com/76766596/183838752-ac8394e4-8185-4a3b-a113-d704577a3665.png)
 
 
 ## Usage
